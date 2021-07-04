@@ -1,0 +1,523 @@
+/*
+	HTML5 Reset :: style.css
+	----------------------------------------------------------
+	We have learned much from/been inspired by/taken code where offered from:
+
+	Eric Meyer					:: https://meyerweb.com
+	HTML5 Doctor				:: https://html5doctor.com
+	and the HTML5 Boilerplate	:: https://html5boilerplate.com
+
+-------------------------------------------------------------------------------*/
+
+/* Let's default this puppy out
+-------------------------------------------------------------------------------*/
+
+html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, menu, nav, section, time, mark, audio, video, details, summary {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font-weight: normal;
+	vertical-align: baseline;
+	background: transparent;
+}
+
+article, aside, figure, footer, header, nav, section, details, summary {display: block;}
+
+/* Handle box-sizing while better addressing child elements:
+   https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+html {
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+/* consider resetting the default cursor: https://gist.github.com/murtaugh/5247154 */
+
+/* Responsive images and other embedded objects
+*/
+img,
+object,
+embed {max-width: 100%;}
+
+/*
+   Note: keeping IMG here will cause problems if you're using foreground images as sprites.
+	 In fact, it *will* cause problems with Google Maps' controls at small size.
+	If this is the case for you, try uncommenting the following:
+
+#map img {
+		max-width: none;
+}
+*/
+
+/* force a vertical scrollbar to prevent a jumpy page */
+html {overflow-y: scroll;}
+
+/* we use a lot of ULs that aren't bulleted.
+	don't forget to restore the bullets within content. */
+ul {list-style: none;}
+
+blockquote, q {quotes: none;}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {content: ''; content: none;}
+
+a {margin: 0; padding: 0; font-size: 100%; vertical-align: baseline; background: transparent;}
+
+del {text-decoration: line-through;}
+
+abbr[title], dfn[title] {border-bottom: 1px dotted #000; cursor: help;}
+
+/* tables still need cellspacing="0" in the markup */
+table {border-collapse: collapse; border-spacing: 0;}
+th {font-weight: bold; vertical-align: bottom;}
+td {font-weight: normal; vertical-align: top;}
+
+hr {display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0;}
+
+input, select {vertical-align: middle;}
+
+pre {
+    white-space: pre; /* CSS2 */
+    white-space: pre-wrap; /* CSS 2.1 */
+    white-space: pre-line; /* CSS 3 (and 2.1 as well, actually) */
+    word-wrap: break-word; /* IE */
+}
+
+input[type="radio"] {vertical-align: text-bottom;}
+input[type="checkbox"] {vertical-align: bottom;}
+.ie7 input[type="checkbox"] {vertical-align: baseline;}
+.ie6 input {vertical-align: text-bottom;}
+
+select, input, textarea {font: 99% sans-serif;}
+
+table {font-size: inherit; font: 100%;}
+
+small {font-size: 85%;}
+
+strong {font-weight: bold;}
+
+td, td img {vertical-align: top;}
+
+/* Make sure sup and sub don't mess with your line-heights https://gist.github.com/413930 */
+sub, sup {font-size: 75%; line-height: 0; position: relative;}
+sup {top: -0.5em;}
+sub {bottom: -0.25em;}
+
+/* standardize any monospaced elements */
+pre, code, kbd, samp {font-family: monospace, sans-serif;}
+
+/* hand cursor on clickable elements */
+.clickable,
+label,
+input[type=button],
+input[type=submit],
+input[type=file],
+button {cursor: pointer;}
+
+/* Webkit browsers add a 2px margin outside the chrome of form elements */
+button, input, select, textarea {margin: 0;}
+
+/* make buttons play nice in IE */
+button,
+input[type=button] {width: auto; overflow: visible;}
+
+/* scale images in IE7 more attractively */
+.ie7 img {-ms-interpolation-mode: bicubic;}
+
+/* prevent BG image flicker upon hover
+   (commented out as usage is rare, and the filter syntax messes with some pre-processors)
+.ie6 html {filter: expression(document.execCommand("BackgroundImageCache", false, true));}
+*/
+
+/* let's clear some floats */
+.clearfix:before, .clearfix:after { content: "\0020"; display: block; height: 0; overflow: hidden; }
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; }
+
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''),
+        url('../fonts/lato-v17-latin-regular.woff2') format('woff2'),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('../fonts/lato-v17-latin-regular.woff') format('woff');
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* lato-700 - latin */
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    src: local(''),
+        url('../fonts/lato-v17-latin-700.woff2') format('woff2'),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('../fonts/lato-v17-latin-700.woff') format('woff');
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* lato-900 - latin */
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 900;
+    src: local(''),
+        url('../fonts/lato-v17-latin-900.woff2') format('woff2'),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('../fonts/lato-v17-latin-900.woff') format('woff');
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+body{
+    font-family:'Times New Roman', Times, serif;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+/* intro styles start */
+.intro__background{
+    min-height: 100vh;
+    background: url(../img/background.jpg) no-repeat center;
+    background-size: cover;
+    padding-top: 3%;
+}
+.intro__header{
+max-width: 85%;
+margin: 0 auto;
+display: flex;
+justify-content: flex-end;
+flex-wrap: wrap;
+padding-bottom: 1%;
+}
+.intro__logo{
+    margin-right: auto;
+}
+.intro__nav{
+    padding-top: 0.5%;
+}
+.intro__nav-list{
+    display: flex;
+}
+.intro__nav-item{
+    margin-right:30px;
+}
+.intro__nav-item:last-child{
+    margin-right:0;
+}
+.intro__nav-link{
+    text-decoration: none;
+    color:white;
+}
+.intro__nav-link:hover,.intro__nav-link:focus,.intro__nav-link:active{
+    opacity: 0.75;
+}
+.intro__search{
+    display: flex;
+    align-items: center;
+}
+.intro__language{
+    color:white;
+}
+.intro__header-border{
+    border-bottom:1px solid white;
+    margin-bottom: 10%;
+}
+.intro__form-field{
+    background-color:transparent;
+    border:0;
+    color:white;
+}
+.intro__form-link{
+margin-right: 40px;
+}
+.intro__language{
+    padding-left: 30px;
+    background: url(../img/swg/globe-icon.svg) no-repeat left center;
+}
+.wrapper__full{
+    max-width: 70%;
+    margin: 0 auto;
+}
+.intro__title{
+    color:white;
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 3%;
+}
+.intro__info{
+    display: flex;
+    /* justify-content: space-between; */
+}
+.intro__subtitile{
+}
+.intro__subtitle-text{
+    color:white;
+    font-size: 24px;
+    margin-bottom: 6%;
+}
+.intro__subtitile-link{
+    color:white;
+    text-decoration: none;
+    font-size: 17px;
+    padding-right: 30px;
+    background: url(../img/swg/arrow-right.svg) no-repeat 95% 60%;
+    transition:0.2s ;
+}
+.intro__subtitile-link:hover,.intro__subtitile-link:active,.intro__subtitile-link:focus{
+    background: url(../img/swg/arrow-right.svg) no-repeat right 60%;
+    
+}
+.intro__cards{
+    width:75%;
+    margin-top: auto;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap:7% ;
+}
+.intro__card{
+    padding:10%;
+}
+.intro__card-text{
+    color:white;
+    font-size: 20px;
+    line-height: 26px;
+    margin-bottom: 7%;
+}
+.intro__card-blue{
+    background: #2378FC;
+}
+.intro__card-green{
+    background: #30BCC9;
+}
+.intro__card-yellow{
+    background: #FFC41E;
+}
+.intro__card-red{
+    background: #F6404F;
+}
+/* intro styles end */
+
+/* info styles start */
+.info{
+    background: #2378FC;
+    padding: 4% 0;
+}
+.info__nav{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.info__nav-title{
+    color:white;
+    margin-bottom: 15%;
+    font-size: 24px;
+}
+.info__nav-item{
+    margin-bottom: 7%;
+}
+.info__nav-link{
+    text-decoration: none;
+    color:white;
+}
+.info__nav-link:hover{
+    color: #FFC41E;
+    text-decoration: underline;
+}
+/* info styles end */
+
+/* event styles estart */
+.events{
+    background: #FFC41E;
+    padding: 5% 0;
+}
+.event__header{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4%;
+}
+.event__header-title{
+    font-size: 24px;
+    font-weight:900;
+}
+.event__header-link{
+    color:black;
+    font-size: 18px;
+    padding-right: 40px;
+    background: url(../img/swg/black-arrow-icon.svg) no-repeat 95% center;
+    transition:0.2s ;
+}
+.event__header-link:hover,.event__header-link:active,.event__header-link:focus{
+    background: url(../img/swg/black-arrow-icon.svg) no-repeat right center;
+}
+.event__cards{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap:5% 3%;
+}
+.event__card-pic{
+    margin-bottom: 2%;
+}
+.event__card-date{
+    margin-bottom: 2%;
+}
+.event__card-name{
+    margin-bottom: 2%;
+    color: #F6404F;
+    font-weight: 900;
+}
+
+/* event styles end */
+
+/* news styles start */
+.news{
+    background: #FAF3E3;
+    padding: 4% 0;   
+}
+.news__main{
+    display: flex;
+}
+.news__pictures{
+    display: flex;
+    flex-direction: column;
+    width:70%;
+    margin-right: 10%;
+}
+.news__pictures-img{
+    margin-bottom: 10%;
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+}
+.news__pictures-img:last-child{
+    margin: 0;
+}
+.news__small-header{
+    display: flex;
+    margin-bottom: 5%;
+    flex-wrap: wrap;
+}
+.news__small-title{
+    font-size: 20px;
+    font-weight: 900;
+}
+.news__small-link{
+    margin-left: auto;
+    color:black;
+    font-size: 18px;
+    padding-right: 40px;
+    background: url(../img/swg/black-arrow-icon.svg) no-repeat 95% center;
+    transition:0.2s ;
+}
+.news__small-link:hover,.news__small-link-link:active,.news__small-link-link:focus{
+    background: url(../img/swg/black-arrow-icon.svg) no-repeat right center;
+}
+.news__small-card{
+    display: flex;
+    margin: 7% 0 auto;
+}
+.news__small-img{
+    width:80%;
+    height: 80%;
+    object-fit: cover;
+    margin-right: 3%;
+}
+.news__small-disc{
+align-self: flex-end;
+}
+.news__small-date{
+    color: #F6404F;
+    font-weight: 700;
+    margin-bottom: 15%;
+}
+.news__small-name{
+    margin-bottom: 10%;
+    font-weight: 700;
+}
+
+/* news styles end */
+
+/* footer styles start */
+.footer{
+    background: #30BCC9;
+    padding: 4% 0 1%;
+}
+.footer__nav{
+    display: flex;
+    flex-wrap: wrap;
+}
+.footer__nav-column{
+    flex:1;
+}
+.footer__nav-block{
+    margin-bottom: 10%;
+}
+.footer__nav-title{
+    color:white;
+    font-size: 21px;
+    font-weight: 500;
+    margin-bottom: 4%;
+}
+.footer__nav-item{
+    margin-bottom: 2%;
+}
+.footer__nav-link{
+    font-weight: 14px;
+    text-decoration: none;
+    color:white;
+}
+.footer__nav-link:hover,.footer__nav-link:active,.footer__nav-link:focus{
+    text-decoration: underline;
+    color:#FFC41E;
+}
+.footer__icons-list{
+    display: flex;
+}
+.footer__icons-item{
+    margin-right: 20px;
+}
+.footer__nav-info{
+    color:white;
+    margin-bottom: 5%;
+}
+.footer__form{
+    /* border:1px solid black; */
+    display: flex;
+    width:250px;
+    height: 40px;
+    border:0;
+    position: relative;
+}
+.footer__form-submit{
+    border:0;
+    width:60px;
+    height: 100%;
+    background: #F6404F;
+    position: relative;
+
+}
+.footer__form-field{
+    padding-left: 10px;
+}
+.footer__form-field::placeholder{
+    font-size: 14px;
+}
+.footer__form-submit::after{
+    background: url(../img/swg/message-icon.svg) no-repeat center;
+    display: block;
+    content:'';
+    position: absolute;
+    width:100%;
+    height: 100%;
+    top:0;
+    left: 0;
+}
+
+/* footer styles end */
